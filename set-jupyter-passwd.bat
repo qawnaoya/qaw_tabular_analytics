@@ -1,1 +1,1 @@
-docker exec -it audio_analytics jupyter notebook password
+docker exec -it tabular_analytics jupyter notebook password
