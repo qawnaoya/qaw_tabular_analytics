@@ -17,4 +17,7 @@ RUN echo "now building..." && \
     conda install -c conda-forge r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally && \
     R -e "install.packages('h2o',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
     R -e "install.packages('BiocManager',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "BiocManager::install(c('graph', 'RBGL'))"
+    R -e "BiocManager::install(c('graph', 'RBGL'))" && \
+    R -e "install.packages('dlm',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
+    R -e "install.packages('KFAS',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
+    R -e "install.packages('bsts',dependencies=TRUE, repos='http://cran.rstudio.com/')"
