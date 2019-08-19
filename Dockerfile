@@ -1,6 +1,5 @@
 FROM jupyter/datascience-notebook
 USER root
-ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 LABEL maintainer="Naoya Ikeda <n_ikeda@hotmail.com>"
 COPY azcopy_linux_amd64_10.2.1/azcopy /usr/local/bin
 RUN echo "now building..." && \
