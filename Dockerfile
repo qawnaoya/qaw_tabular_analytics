@@ -14,11 +14,5 @@ RUN echo "now building..." && \
     conda install -c h2oai h2o && \
     conda install -c conda-forge xgboost lightgbm fbprophet lime shap && \
     conda install -c r rpy2 r-survival r-ggplot2 r-ggextra && \
-    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn && \
-    R -e "install.packages('h2o',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "install.packages('BiocManager',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "BiocManager::install(c('graph', 'RBGL'))" && \
-    R -e "install.packages('dlm',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "install.packages('KFAS',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "install.packages('bsts',dependencies=TRUE, repos='http://cran.rstudio.com/')" && \
-    R -e "install.packages('BNSL',dependencies=TRUE, repos='http://cran.rstudio.com/')" 
+    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn 
+
