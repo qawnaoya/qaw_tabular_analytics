@@ -13,6 +13,6 @@ RUN echo "now building..." && \
     conda install -c h2oai h2o && \
     conda install -c conda-forge xgboost lightgbm fbprophet lime shap && \
     conda install -c r rpy2 r-survival r-ggplot2 r-ggextra && \
-    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn r-rstanarm && \
+    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn r-rstanarm r-devtools && \
     pip install optuna
 
