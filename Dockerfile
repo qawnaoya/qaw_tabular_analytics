@@ -11,6 +11,13 @@ RUN echo "now building..." && \
     jupyter-nbextension install rise --py --sys-prefix && \
     jupyter-nbextension enable rise --py --sys-prefix && \
     conda install -c h2oai h2o && \
-    conda install -c conda-forge xgboost lightgbm fbprophet lime shap && \
+    conda install -c conda-forge xgboost lightgbm fbprophet lime shap r-shinystan && \
     conda install -c r rpy2 r-survival r-ggplot2 r-ggextra && \
-    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn r-rstanarm
+    conda install -c conda-forge r-bh r-odbc r-reticulate r-prophet r-xgboost r-lightgbm r-ggally r-v8 r-rcpp r-fitdistrplus r-bnlearn r-rstanarm r-devtools && \
+    pip install optuna
+
+RUN curl -L  "https://oscdl.ipa.go.jp/IPAexfont/ipaexg00301.zip" > font.zip && \
+    unzip font.zip && \
+    cp ipaexg00301/ipaexg.ttf /opt/conda/lib/python3.6/site-packages/matplotlib/mpl-data/fonts/ttf/ipaexg.ttf && \
+    echo "font.family : IPAexGothic" >>  /opt/conda/lib/python3.6/site-packages/matplotlib/mpl-data/matplotlibrc && \
+    rm -r ./.cache
